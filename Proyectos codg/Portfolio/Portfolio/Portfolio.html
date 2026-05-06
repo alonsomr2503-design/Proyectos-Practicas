@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Portfolio.css">
+  <title>Portafolio | Alonso Mariblanca</title>
+  
+</head>
+<body>
+
+  <!-- Cabecera con navegación principal -->
+  <header>
+    <a href="#inicio" class="logo" aria-label="Ir al inicio">AM.</a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Sección de presentación -->
+    <section id="inicio" class="hero" aria-labelledby="titulo-hero">
+      <h1 id="titulo-hero">Hola, soy <span>Alonso Mariblanca</span></h1>
+      <p>Estudiante de Desarrollo de Aplicaciones Web. Me apasiona construir interfaces limpias y accesibles.</p>
+      <div class="btns">
+        <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn-secondary">Contactar</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <h2 id="titulo-sobre-mi">Sobre mí</h2>
+      <div class="sobre-mi">
+        <p>Soy estudiante de primer año de DAW en el IES Juan Bosco. Me interesa el desarrollo frontend, el diseño de interfaces y la accesibilidad web.</p>
+        <p>Fuera del código me gusta el diseño gráfico y estar al tanto de las últimas tendencias en tecnología.</p>
+      </div>
+    </section>
+
+    <!-- Formación académica -->
+    <section id="estudios" aria-labelledby="titulo-estudios">
+      <h2 id="titulo-estudios">Estudios</h2>
+      <div class="estudios">
+
+        <div class="estudio-item">
+          <div class="estudio-icon" aria-hidden="true">🎓</div>
+          <div class="estudio-info">
+            <h3>Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+            <p class="centro">IES Juan Bosco</p>
+            <time class="fecha" datetime="2023">2025 – 2026 (en curso)</time>
+          </div>
+        </div>
+
+        <div class="estudio-item">
+          <div class="estudio-icon" aria-hidden="true">📚 </div>
+          <div class="estudio-info">
+            <h3>Bachillerato General</h3>
+            <p class="centro">IES Hermogenes</p>
+            <time class="fecha" datetime="2022">2022 – 2024</time>
+          </div>
+        </div>
+
+        <div class="estudio-item">
+          <div class="estudio-icon" aria-hidden="true">🌐</div>
+          <div class="estudio-info">
+            <h3>Ingles Practico</h3>
+            <p>A pesar de no tener ninguna titulacion de ingles mas alla del Bachillerato 
+                tengo un ingles practico aprendido a traves de muchas conversaciones con nativos ingleses
+                 y mucho contenido consumido totalmente en ingles</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Habilidades técnicas -->
+    <section id="habilidades" aria-labelledby="titulo-habilidades">
+      <h2 id="titulo-habilidades">Habilidades</h2>
+      <ul class="skills-grid" aria-label="Listado de habilidades técnicas">
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>HTML5</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>CSS3</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>JavaScript</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>Git & GitHub</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>SQL</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>PHP</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>Java</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>Figma</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>Linux</li>
+        <li class="skill"><span class="skill-dot" aria-hidden="true"></span>Accesibilidad web</li>
+      </ul>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" aria-labelledby="titulo-proyectos">
+      <h2 id="titulo-proyectos">Proyectos</h2>
+      <div class="proyectos-grid">
+
+        <!-- <article class="proyecto">
+          <header>
+            <h3>🛒 Tienda online</h3>
+          </header>
+          <p>Aplicación web de e-commerce con carrito de compras, filtros por categoría y panel de administración.</p>
+          <ul class="tags" aria-label="Tecnologías usadas">
+            <li class="tag-item">PHP</li>
+            <li class="tag-item">MySQL</li>
+            <li class="tag-item">CSS</li>
+          </ul>
+        </article> -->
+
+       <!-- <article class="proyecto">
+          <header>
+            <h3>📅 Gestor de tareas</h3>
+          </header>
+          <p>App de productividad con sistema de tareas, categorías y almacenamiento en base de datos.</p>
+          <ul class="tags" aria-label="Tecnologías usadas">
+            <li class="tag-item">JavaScript</li>
+            <li class="tag-item">HTML</li>
+            <li class="tag-item">CSS</li>
+          </ul>
+        </article> -->
+
+        <article class="proyecto">
+          <header>
+            <h3>🎨 Portafolio personal</h3>
+          </header>
+          <p>Este mismo portafolio. Diseñado con HTML semántico, CSS puro y buenas prácticas de accesibilidad.</p>
+          <ul class="tags" aria-label="Tecnologías usadas">
+            <li class="tag-item">HTML5</li>
+            <li class="tag-item">CSS3</li>
+            <li class="tag-item">Accesibilidad</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <nav class="contacto-links" aria-label="Formas de contacto">
+        <a href="mailto:alonsomr2503@gmail.com" class="contacto-link" aria-label="Enviar correo a Alonso">
+          <span class="icono" aria-hidden="true">✉️</span>
+          alonsomr2503@gmail.com
+          <span class="desc">Email</span>
+        </a>
+        <a href="https://github.com/alonsomariblanca" class="contacto-link" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de Alonso (abre en nueva pestaña)">
+          <span class="icono" aria-hidden="true">🐙</span>
+          github.com/alonsomr2503-design
+          <span class="desc">GitHub</span>
+        </a>
+      </nav>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Hecho con HTML y CSS · <time datetime="2026">2026</time> Alonso Mariblanca</p>
+  </footer>
+
+</body>
+</html>
