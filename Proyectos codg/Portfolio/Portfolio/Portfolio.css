@@ -13,6 +13,14 @@
   --max-width: 1100px;
 }
 
+/* Tema claro */
+body.light {
+  --color-bg: #f5f5f0;
+  --color-surface: #ffffff;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+}
+
 *,
 *::before,
 *::after {
@@ -30,6 +38,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
 }
 
 /* =========================
@@ -71,6 +80,10 @@ header {
   padding: 1rem;
 }
 
+body.light header {
+  background: rgba(245, 245, 240, 0.92);
+}
+
 .logo {
   font-weight: bold;
   font-size: 1.4rem;
@@ -92,6 +105,28 @@ nav a {
 
 nav a:hover {
   color: var(--color-primary);
+}
+
+/* Botón de tema */
+.theme-toggle {
+  background: var(--color-surface);
+  border: 1px solid #333;
+  color: var(--color-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 /* =========================
@@ -215,10 +250,11 @@ nav a:hover {
 }
 
 /* =========================
-   PROYECTOS
+   PROYECTOS — Flexbox
 ========================= */
 .proyectos-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -227,6 +263,9 @@ nav a:hover {
   padding: 1rem;
   border-radius: var(--radius);
   transition: var(--transition);
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .proyecto:hover {
@@ -283,10 +322,52 @@ nav a:hover {
    FOOTER
 ========================= */
 footer {
-  text-align: center;
-  padding: 2rem 1rem;
   border-top: 1px solid #222;
+  padding: 2rem 1rem;
   color: var(--color-text-muted);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+/* Redes sociales en footer */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: var(--color-surface);
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  transform: translateY(-3px);
 }
 
 /* =========================
@@ -301,4 +382,86 @@ footer {
   .btns {
     flex-direction: column;
   }
+
+  .proyectos-grid {
+    flex-direction: column;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =========================
+   FORMULARIO NUEVO ESTUDIO
+========================= */
+.form-estudio {
+  background: var(--color-surface);
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-estudio legend {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-grupo label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.form-grupo input {
+  background: var(--color-bg);
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-grupo input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-error {
+  font-size: 0.85rem;
+  color: #ff4d4d;
+  font-weight: 600;
+}
+
+.btn-añadir {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+  justify-self: start;
+}
+
+.btn-añadir:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
 }
